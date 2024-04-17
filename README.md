@@ -1,96 +1,96 @@
 # CAI(Color Artificial Intelligence)
-   
----
-   
-## [ About CAI Project ]
-`CAI`´Â »ç¿ëÀÚ°¡ ¾÷·ÎµåÇÑ »çÁøÀ» µö·¯´× ¸ğµ¨À» Àû¿ëÇÏ¿© ÆÛ½º³ÎÄÃ·¯ Å¸ÀÔÀ» Áø´ÜÇÏ°í, ÀÌ¸¦ ±â¹İÀ¸·Î ÆÛ½º³ÎÄÃ·¯ ÆÈ·¹Æ®¿Í ÆĞ¼Ç ¾ÆÀÌÅÛÀ» ÃßÃµÇÕ´Ï´Ù.   
-±âÁ¸¿¡ »ç¶÷ÀÇ ´«¿¡ ÀÇÇØ ÆÇ´ÜµÇ¾ú´ø ÁÖ°üÀûÀÎ ÆÛ½º³Î ÄÃ·¯ Å¸ÀÔÀÇ Áø´Ü °úÁ¤À» »ç¿ëÀÚ¿¡°Ô Á¦°ø¹ŞÀº »çÁøÀ» È­ÀÌÆ® ¹ë·±½º Á¶Á¤ µî ÀüÃ³¸®¸¦ °ÅÃÄ ¾òÀº Ãø»ö °á°ú·Î »ç¿ëÀÚÀÇ ÆÛ½º³Î ÄÃ·¯ Å¸ÀÔÀ» Áø´ÜÇÕ´Ï´Ù.   
-   
-`Personal Color`´Â °³ÀÎ °íÀ¯ÀÇ ½ÅÃ¼»öÀ» ÀÇ¹ÌÇÏ¸ç, °³ÀÎÀÇ Æ¯¼ºÀ» ºĞ¼®ÇÏ¿© ÆÛ½º³ÎÄÃ·¯ Å¸ÀÔ ºĞ·ùÃ¼°èÀÇ ÇÑ Å¸ÀÔ¿¡ °³ÀÎÀ» ´ëÀÀ½ÃÄÑ ±×¿¡ Á¶È­¸¦ ÀÌ·ç´Â »öÀ» Áø´ÜÇÏ¿© ÀûÇÕÇÑ ¸ŞÀÌÅ©¾÷, Çì¾î, ÀÇ»ó µîÀÇ »öÃ¤ ÀÌ¹ÌÁö¸¦ ¿¬ÃâÇÏ´Â ½Ã½ºÅÛÀÔ´Ï´Ù.   
-   
-#### `< CAI Total Process >`   
-<img src="jay/img/total-process.jpg" width=100%>   
-   
----
-   
-## [ Deep Learning_Personal Color Type Classifier ]
-   
-### Dataset Creater
 
-#### `< Face Detection >`   
-<img src="jay/img/face-detection.jpg" width=100%>   
-   
-#### `< Skin Color Extraction >`   
-<img src="jay/img/skin-color-extraction.jpg" width=100%>   
-   
-#### `< Color System Converter & Type Classifier >`   
-<img src="jay/img/color-system-converter.jpg" width=100%>   
-   
-- `Face Detection`   
-	¾ó±¼ÀÎ½Ä, ÀÌ¹ÌÁö ¸®»çÀÌÂ¡ (input image ¾à 20¸¸Àå / output image ¾à 15¸¸Àå)   
-	ÀÎ¹° ÀÌ¹ÌÁö¸¦ ÀüÃ³¸® ÈÄ `Haar Cascade`¹æ½ÄÀ¸·Î ¾ó±¼ ÀÎ½Ä, ÅëÀÏµÈ »çÀÌÁî·Î ¾ó±¼ ÀÌ¹ÌÁö È¹µæ   
-- `Skin Color Extraction`   
-	Face DetectionÀ¸·Î ¾òÀº ¾ó±¼ ÀÌ¹ÌÁö¿¡¼­ ¾È¸é»ö ÃßÃâ   
-	Ãø»öÀÇ Á¤È®µµ¸¦ À§ÇØ 2°¡Áö ÇÊÅÍ »ç¿ë, K-means ¹æ½ÄÀ» ÀÌ¿ëÇØ »ö ÃßÃâ   
-- `Color System Converter`   
-	ÃßÃâµÈ »ö ¸®½ºÆ®¸¦ Æò±Õ »öÀ¸·Î ´ëÃ¼ ÇÏ¿© ¾Ë°í¸®Áò Àû¿ëÀ» À§ÇÑ »ö Ã¼°è º¯È¯   
-	(BGR ¡æ RGB ¡æ HSV)   
-- `Type Classifier`   
-	ÆÛ½º³ÎÄÃ·¯ Å¸ÀÔ ºĞ·ù ¾Ë°í¸®ÁòÀ» Àû¿ëÇØ Ãø»ö °á°ú °ª(¾È¸é »ö)À¸·Î µ¥ÀÌÅÍ¼Â »ı¼º   
-   
-   
+---
+
+## [ About CAI Project ]
+
+`CAI` applies a deep learning model to user-uploaded photos to diagnose their personal color type and recommends personal color palettes and fashion items based on this diagnosis. The subjective diagnosis process of personal color type, traditionally judged by human eyes, is replaced with preprocessing steps such as white balance adjustment on the user-uploaded photos to obtain color matching results, which are then used to diagnose the user's personal color type.
+
+`Personal Color` refers to the unique color of an individual's skin. By analyzing individual characteristics, this system matches individuals to one of the types in the personal color type classification system, diagnosing suitable makeup, hair, clothing, and other color images to create a harmonious appearance.
+
+#### `< CAI Total Process >`
+<img src="jay/img/total-process.jpg" width=100%>
+
+---
+
+## [ Deep Learning_Personal Color Type Classifier ]
+
+### Dataset Creator
+
+#### `< Face Detection >`
+<img src="jay/img/face-detection.jpg" width=100%>
+
+#### `< Skin Color Extraction >`
+<img src="jay/img/skin-color-extraction.jpg" width=100%>
+
+#### `< Color System Converter & Type Classifier >`
+<img src="jay/img/color-system-converter.jpg" width=100%>
+
+- `Face Detection`
+    Face recognition, image resizing (input image about 200,000 / output image about 150,000)
+    Facial images are preprocessed and face recognition is performed using the `Haar Cascade` method to obtain uniform-sized facial images.
+- `Skin Color Extraction`
+    Facial skin color extraction from facial images obtained by Face Detection.
+    Two filters are used for color accuracy, and colors are extracted using the K-means method.
+- `Color System Converter`
+    Replaces the extracted color list with average colors for color system conversion required for algorithm application.
+    (BGR â†’ RGB â†’ HSV)
+- `Type Classifier`
+    Applies personal color type classification algorithm to create datasets using color matching results (facial colors).
+
 ### Deep Learning
 
-#### `< CNN/AlexNet >`   
-<img src="jay/img/cnn-alexnet.jpg" width=100%>   
-   
-`AlexNet` : »ö»óÀÎ ºÎºĞ°ú »ö»óÀÌ ¾Æ´Ñ ºÎºĞÀ¸·Î ³ª´©¾î Ã³¸®µÇ±â ¶§¹®¿¡ '»ö ÇĞ½À'¿¡ ¿ëÀÌÇÏ´Ù°í ÆÇ´ÜÇÏ¿© ¼±Á¤   
-Result model : `CAI.h5`   
-   
+#### `< CNN/AlexNet >`
+<img src="jay/img/cnn-alexnet.jpg" width=100%>
+
+`AlexNet`: Chosen for its suitability for 'color learning' as it separates color and non-color parts.
+Result model: `CAI.h5`
+
 ---
-   
+
 ## [ Color Palette Extraction ]
-   
+
 ### Bright Palette & Harmony Palette
 
-#### `< Personal color Analysis >`   
-<img src="jay/img/Data-Analysis.jpg" width=100%>   
+#### `< Personal color Analysis >`
+<img src="jay/img/Data-Analysis.jpg" width=100%>
 
-»ö ÀÌ·Ğ°ú ÆÛ½º³ÎÄÃ·¯ °ü·Ã ³í¹®À» Âü°íÇÏ¿© 1Â÷ Ãø»ö ºÎÀ§ & Áø´Ü »ö ¼±Á¤   
-ÆÛ½º³ÎÄÃ·¯ ÀÌ·Ğ°ú Ãø»ö ºÎÀ§ & Áø´Ü »öÀÇ ÇÕ¸®¼ºÀ» °ËÁ¤ÇÏ±â À§ÇØ ¼³¹®Á¶»ç ÁøÇà   
-´Ù°¢Àû ºĞ¼®°ú Á¤È®¼ºÀ» À§ÇØ ³×ÀÌ¹ö µ¥ÀÌÅÍ·¦ ÀÌ¿ë, ºĞ¼® È®Àå   
-ºĞ¼® °á°ú¿¡ µû¶ó ÆÛ½º³ÎÄÃ·¯ Å¸ÀÔ ºĞ·ù ±âÁØÀÎ Ãø»ö ºÎÀ§ & Áø´Ü »ö º¯°æ   
-[* Personal color theory analysis report](https://github.com/slmteruto/CAI/blob/master/jay/Analysis/Report/Color_theory_analysis.ipynb)   
-[* Personal color statistical analysis report](https://github.com/slmteruto/CAI/blob/master/cys/CAI_elementaryItem_analysis.ipynb)   
-   
-   
-### Main purchase Palette
+Primary color matching areas and diagnosed colors are selected based on color theory and personal color-related papers.
+A survey is conducted to test the rationality of personal color theory, matching areas, and diagnosed colors.
+Naver Data Lab is used for comprehensive analysis and accuracy enhancement.
+Based on analysis results, matching areas and diagnosed colors, which are criteria for personal color type classification, are modified.
+[* Personal color theory analysis report](https://github.com/slmteruto/CAI/blob/master/jay/Analysis/Report/Color_theory_analysis.ipynb)
+[* Personal color statistical analysis report](https://github.com/slmteruto/CAI/blob/master/cys/CAI_elementaryItem_analysis.ipynb)
+
+### Main Purchase Palette
 
 #### `< Data acquisition & Main color Extraction >`
-<img src="jay/img/color-clustering.jpg" width=100%>   
+<img src="jay/img/color-clustering.jpg" width=100%>
 
-- `Clothes color Extraction`   
-	»óÇ° ÀÌ¹ÌÁö¸¦ `Topwear.h5`(ÆĞ¼Ç¾ÆÀÌÅÛ ºĞ¸® ¸ğµ¨)À» ÀÌ¿ëÇØ ¸¶½ºÅ© »ı¼º   
-	¿øº» ÀÌ¹ÌÁö¿¡ ¸¶½ºÅ©¸¦ °áÇÕÇÏ¿© ÆĞ¼Ç¾ÆÀÌÅÛÀ» Á¦¿ÜÇÑ ÀÌ¹ÌÁö ¿µ¿ª »èÁ¦   
-	K-means ¹æ½ÄÀ» ÀÌ¿ëÇØ »ö ÃßÃâ, »óÇ° º° »ö µ¥ÀÌÅÍ¸¦ µ¥ÀÌÅÍº£ÀÌ½º¿¡ ÀûÀç   
-- `Main color Extraction`   
-	»ç¿ëÀÚÀÇ ±¸¸Å»óÇ°À» ½Ç½Ã°£À¸·Î Á¶È¸, ±¸¸ÅÇÑ »óÇ°ÀÇ »ö ¸®½ºÆ®¸¦ È¹µæ   
-	Gray tone Filter¸¦ ÀÌ¿ëÇØ ¸®½ºÆ® Áß Èæ¹é¿¡ ±ÙÁ¢ÇÑ »óÇ°À» Á¦¿Ü   
-	Å¬·¯½ºÅÍ¸µÀÇ ¿ÀÂ÷¸¦ ÁÙÀ§±â À§ÇØ Color Generator·Î ±¸¸Å»óÇ° »ö»ó ±Ô¸ğ È®Àå   
-	È®ÀåµÈ »ö µ¥ÀÌÅÍ¸¦ `Hierarchical Clustering`¸¦ ÀÌ¿ëÇØ ÁÖ¿ä ±¸¸Å »ö»ó ÆÈ·¹Æ®¸¦ ÃßÃâ   
-   
+- `Clothes Color Extraction`
+    Masks are created using the `Topwear.h5` model for product images (fashion item separation).
+    Fashion item exclusion is applied to the original image by combining the mask with it.
+    Colors are extracted using the K-means method, and color data per product is loaded into the database.
+- `Main Color Extraction`
+    User's purchased items are queried in real-time, and color lists of purchased items are obtained.
+    Items close to grayscale are excluded from the list using a gray tone filter.
+    To reduce clustering errors, the Color Generator expands the scale of purchased item colors.
+    Hierarchical Clustering is used to extract the main purchase color palette from the expanded color data.
+
 ---
-   
-## [ Webstie ]
+
+## [ Website ]
 
 #### `< Web structure >`
-<img src="jay/img/cai-webpage.jpg" width=100%>   
+<img src="jay/img/cai-webpage.jpg" width=100%>
 
-- `Personal color type Prediction`   
-	À¥À» ÅëÇØ »ç¿ëÀÚ°¡ ¾÷·ÎµåÇÑ »çÁøÀ» **CAI.h5**¸¦ Àû¿ë, ÆÛ½º³ÎÄÃ·¯ Å¸ÀÔÀ» ¿¹ÃøÇØ »ç¿ëÀÚ¿¡°Ô ¾È³»   
-- `Matched Personal color palette`   
-	»ç¿ëÀÚÀÇ Å¸ÀÔ °á°ú¿Í **Skin Color Extraction**·Î ÃßÃâÇÑ ÇÇºÎ»ö¿¡ ´ëÀÀÇÏ´Â °³ÀÎÈ­ ÆÈ·¹Æ®¸¦ Á¦°ø   
-- `Fashion item Recommendation`   
-	ÃßÃâµÈ 3°¡Áö ÆÈ·¹Æ®¿¡ ÇØ´çÇÏ´Â »óÇ°À» µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ ½Ç½Ã°£À¸·Î Á¶È¸ÇØ ÃßÃµ, »ç¿ëÀÚº° °³ÀÎÈ­ ¼­ºñ½º¸¦ Á¦°ø   
-	¡Ø ÆÈ·¹Æ®1 : **Bright Palette** / ÆÈ·¹Æ®2 : **Harmony Palette** / ÆÈ·¹Æ®3 : **Main purchase Palette**   
-[* Clustering accuracy evaluation report](https://github.com/slmteruto/CAI/blob/master/jay/Analysis/Report/Clustering_Evaluation.ipynb)   
+- `Personal color type Prediction`
+    Predicts personal color type by applying **CAI.h5** to photos uploaded by users via the web.
+- `Matched Personal color palette`
+    Provides personalized palettes corresponding to user's type results and skin colors extracted through **Skin Color Extraction**.
+- `Fashion item Recommendation`
+    Recommends products corresponding to the extracted three palettes in real-time from the database, providing personalized services for each user.
+    â€» Palette 1: **Bright Palette** / Palette 2: **Harmony Palette** / Palette 3: **Main Purchase Palette**
+[* Clustering accuracy evaluation report](https://github.com/slmteruto/CAI/blob/master/jay/Analysis/Report/Clustering_Evaluation.ipynb)
+
+---

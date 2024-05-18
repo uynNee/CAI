@@ -59,8 +59,8 @@ Based on color theory and papers related to personal colors, primary color match
 To verify the rationality of personal color theory and primary color matching areas & diagnosis colors, surveys are conducted.
 Naver Data Lab is used for multidimensional analysis and accuracy extension.
 Based on the analysis results, the primary color matching areas & diagnosis colors, which are the criteria for personal color type classification, are modified.
-[*Personal color theory analysis report](https://github.com/slmteruto/CAI/blob/master/jay/Analysis/Report/Color_theory_analysis.ipynb)
-[*Personal color statistical analysis report](https://github.com/slmteruto/CAI/blob/master/cys/CAI_elementaryItem_analysis.ipynb)
+[*Personal color theory analysis report](https://github.com/uynNee/CAI/blob/master/jay/Analysis/Report/Color_theory_analysis.ipynb)
+[*Personal color statistical analysis report](https://github.com/uynNee/CAI/blob/master/cys/CAI_elementaryItem_analysis.ipynb)
 
 ### Main purchase Palette
 
@@ -91,4 +91,4 @@ Based on the analysis results, the primary color matching areas & diagnosis colo
 - `Fashion item Recommendation`
    Recommends products corresponding to the extracted three palettes in real-time from the database, providing personalized services for each user.
    ※ Palette 1: **Bright Palette** / Palette 2: **Harmony Palette** / Palette 3: **Main purchase Palette**
-[*Clustering accuracy evaluation report](https://github.com/slmteruto/CAI/blob/master/jay/Analysis/Report/Clustering_Evaluation.ipynb)
+[*Clustering accuracy evaluation report](https://github.com/uynNee/CAI/blob/master/jay/Analysis/Report/Clustering_Evaluation.ipynb)

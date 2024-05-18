@@ -1,0 +1,34 @@
+### Conditions for Using Linear Regression Analysis
+
+1. **The values of the independent variables should form a normal distribution, and the variances of all normal distributions should be equal.**
+   - We think the variables in the Titanic example might not follow a normal distribution. Let's verify this.
+
+2. **The values of the dependent variables should be statistically independent from each other.**
+   - How can we statistically prove that the dependent variables are independent of each other?
+     - In regression analysis, present the Durbin-Watson value to show that it is not far from 2.
+     - The Durbin-Watson value is obtained when running machine learning.
+
+3. **In multiple regression analysis, there should be no multicollinearity among the independent variables.**
+   - What is multicollinearity? For example, if we look at the impact of age and grade on depression, age and grade are almost the same variable, so they can be seen as nearly the same concept among the independent variables.
+   - In actual statistical analysis, if the VIF (Variance Inflation Factor) is 10 or more, multicollinearity is considered to exist.
+     - Thus, considering that people's perceptions and desired perceptions about personal color might be very similar, the multicollinearity score might be high. It might be necessary to choose just one of the two.
+
+### How to Read the Results Table
+
+- **R-squared (R©÷) value is 0.589.** R-squared indicates how well the "height = B0 + B1 * weight" regression model explains the body dataframe. The result means that the linear regression model explains 58.9% of the variability in height. R-squared ranges from 0 to 1, where 0 means the model does not explain the data at all, and 1 means the model perfectly explains the data. In social sciences, a model with an R-squared of 0.4 or higher is generally considered good.
+
+- **Coef (coefficient) values**: The intercept is 107.8624, and the weight coefficient is 0.8904. When these coefficient values are inserted into the linear regression model, the equation becomes "height = 107.8624 + 0.8904 * weight".
+
+- **P>|t| (p-value)**: This indicates the significance of the independent variables. Usually, an independent variable is considered significant if it has a p-value of less than 0.05 at a 95% confidence level. In this case, the p-value for weight is 0, meaning weight significantly affects height.
+
+- **Durbin-Watson (DW) value is 2.201.** The DW test assesses the independence of residuals. A value of 0 indicates positive autocorrelation among residuals, 2 indicates no autocorrelation (independence), and 4 indicates negative autocorrelation. Generally, a value between 1.5 and 2.5 suggests independence and indicates that the regression model is appropriate. If the DW value is close to 0 or 4, it means that residuals have autocorrelation, which can distort the significance of t-values, F-values, and R-squared.
+
+- **No. of observations is 24.** This means that the regression analysis was conducted with 24 data pairs.
+
+- **Df Model is 1.** This represents the number of predictors in the regression analysis. The total number of parameters in regression includes one dependent variable, so Df Model is "total number of parameters - 1". In this example, with one predictor ("weight"), the Df Model is 1.
+
+- **Df Residuals is 22.** This is calculated as "No. of observations - (Df Model + 1)". It represents the number of observations minus the total number of parameters in the regression model. In our model, it is 24 - 2 = 22.
+
+#### References
+- [Naver Blog](https://m.blog.naver.com/PostView.nhn?blogId=moses3650&logNo=221181224517&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
+- [Kiyoja Blog](https://kiyoja07.blogspot.com/2019/03/python-linear-regression.html)
